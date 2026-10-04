@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Risk Assessment</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/chatbot.css"></head><body><header id="nav"></header><main><section><div class="wrap"><h1>Diabetes Risk Assessment</h1>
+<p class="note"><strong>Educational only.</strong> This does not diagnose diabetes. We ask no name, phone, email or address. Answers stay in your browser and are not stored.</p><br>
+<form id="riskForm" class="card" novalidate>
+<div><label for="age">Age group</label><select id="age"><option value="">Choose…</option><option value="0">Under 30</option><option value="1">30 – 44</option><option value="2">45 – 59</option><option value="3">60 or above</option></select><div class="err" id="ageErr"></div></div>
+<div><label for="height">Height (cm)</label><input id="height" type="number" inputmode="decimal" placeholder="e.g. 165"><div class="err" id="heightErr"></div></div>
+<div><label for="weight">Weight (kg)</label><input id="weight" type="number" inputmode="decimal" placeholder="e.g. 60"><div class="err" id="weightErr"></div></div>
+<div><label for="activity">Physical activity</label><select id="activity"><option value="">Choose…</option><option value="0">Active (most days)</option><option value="1">Some activity (1–3 days/week)</option><option value="2">Little or none</option></select><div class="err" id="activityErr"></div></div>
+<div><label for="family">Family history of diabetes</label><select id="family"><option value="">Choose…</option><option value="0">None known</option><option value="1">Grandparent, aunt or uncle</option><option value="3">Parent or sibling</option></select><div class="err" id="familyErr"></div></div>
+<div><label for="bp">High blood pressure history</label><select id="bp"><option value="">Choose…</option><option value="0">No</option><option value="2">Yes</option></select><div class="err" id="bpErr"></div></div>
+<div><label for="smoke">Smoking status</label><select id="smoke"><option value="">Choose…</option><option value="0">Never smoked</option><option value="1">Former smoker</option><option value="2">Current smoker</option></select><div class="err" id="smokeErr"></div></div>
+<div><label for="diet">Sugary food or drinks</label><select id="diet"><option value="">Choose…</option><option value="0">Rarely</option><option value="1">A few times a week</option><option value="2">Daily</option></select><div class="err" id="dietErr"></div></div>
+<div class="full"><button class="btn" type="submit">Calculate educational risk</button><button class="btn dark" type="reset">Clear</button></div></form>
+<div id="result" class="res" hidden aria-live="polite"></div></div></section></main>
+<footer id="foot"></footer><script src="js/main.js"></script><script src="js/assessment.js"></script><script src="js/faq.js"></script><script src="js/chatbot.js"></script></body></html>

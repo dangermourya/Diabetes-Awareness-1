@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI Behind This Project</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/chatbot.css"></head><body><header id="nav"></header><main><section><div class="wrap"><h1>AI Behind This Project</h1>
+<p>Honest summary: this is a <strong>simple rule-based classifier</strong>, not deep learning. The rules were written by a student from commonly known risk factors, not learned from patient data, and are not clinically validated.</p>
+<h2>Input → Processing → Output</h2>
+<div class="flow"><div>User input</div><span>↓</span><div>Data processing (validate, calculate BMI)</div><span>↓</span><div>Feature analysis (points per feature)</div><span>↓</span><div>Risk calculation (add points)</div><span>↓</span><div>Risk category</div><span>↓</span><div>Educational recommendation</div></div></div></section>
+<section class="alt-bg"><div class="wrap"><h2>Scoring table (fully transparent)</h2><div class="tw"><table><tr><th>Feature</th><th>Choices and points</th><th>Max</th></tr>
+<tr><td>Age group</td><td>Under 30 = 0; 30–44 = 1; 45–59 = 2; 60+ = 3</td><td>3</td></tr>
+<tr><td>BMI (weight ÷ height²)</td><td>Below 23 = 0; 23–27.4 = 2; 27.5+ = 3 (Asian cut-offs)</td><td>3</td></tr>
+<tr><td>Physical activity</td><td>Active = 0; some = 1; little = 2</td><td>2</td></tr>
+<tr><td>Family history</td><td>None = 0; relative = 1; parent/sibling = 3</td><td>3</td></tr>
+<tr><td>High blood pressure</td><td>No = 0; Yes = 2</td><td>2</td></tr>
+<tr><td>Smoking</td><td>Never = 0; former = 1; current = 2</td><td>2</td></tr>
+<tr><td>Sugary food/drinks</td><td>Rarely = 0; weekly = 1; daily = 2</td><td>2</td></tr></table></div>
+<p><strong>Classification:</strong> total 0–5 = Lower Risk; 6–10 = Moderate Risk; 11–17 = Higher Risk. Points and thresholds are our simplified design choices.</p>
+<h3>Example</h3><div class="card"><p><strong>Input:</strong> age 60+, low activity, family history (parent), BMI 28.<br><strong>Processing:</strong> 3 + 2 + 3 + 3 = 11 points.<br><strong>Output:</strong> Higher Risk category (educational, not a diagnosis).</p></div></div></section>
+<section><div class="wrap"><h2>AI concepts shown</h2><div class="grid">
+<div class="card"><h3>Data collected</h3><p>8 answers typed by the user. Nothing is saved or sent.</p></div>
+<div class="card"><h3>Features</h3><p>Age group, BMI, activity, family history, blood pressure, smoking, diet.</p></div>
+<div class="card"><h3>Preprocessing</h3><p>Range checks, converting height and weight into BMI, converting choices to numbers.</p></div>
+<div class="card"><h3>Classification</h3><p>The score is mapped to one of three classes using thresholds.</p></div></div></div></section>
+<section class="alt-bg"><div class="wrap"><h2>Responsible AI</h2><div class="grid">
+<div class="card"><h3>Privacy</h3><p>No account, no identifying questions, no database. The calculation runs in your browser.</p></div>
+<div class="card"><h3>Bias and fairness</h3><p>BMI cut-offs and risk differ between populations, so a simple rule may be unfair to some people, such as athletes.</p></div>
+<div class="card"><h3>False positives</h3><p>Says higher risk when the person is actually fine. Causes worry and extra tests.</p></div>
+<div class="card"><h3>False negatives</h3><p>Says lower risk when the person actually has a problem. This may delay care.</p></div>
+<div class="card"><h3>Limitations</h3><p>Only 7 features, no blood tests, not validated, self-reported data may be wrong.</p></div>
+<div class="card"><h3>Human oversight</h3><p>AI can support awareness, but only a doctor can diagnose. A prediction is never a diagnosis, and humans must make final health decisions.</p></div></div></div></section></main>
+<footer id="foot"></footer><script src="js/main.js"></script><script src="js/faq.js"></script><script src="js/chatbot.js"></script></body></html>
